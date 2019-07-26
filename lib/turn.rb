@@ -1,9 +1,9 @@
 def display_board(board)
-  puts " #{board[0]} | #{board[1]} | #{board[2]}"
-  puts "-----------"
-  puts " #{board[3]} | #{board[4]} | #{board[5]}"
-  puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]}"
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts '-----------'
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts '-----------'
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 def position_taken?(board, index)
@@ -35,7 +35,8 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   if valid_move?(board, index)
-    move(board, index, board = "X")
+    move(board, index)
+  else
     turn(board)
   end
   display_board(board)
